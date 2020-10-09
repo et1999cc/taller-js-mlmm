@@ -1,0 +1,35 @@
+/* Configuración del div que envuelve todo el contenido */
+.contenedor{
+    width: 50vw;
+    height: 30vh;
+    margin: 10vh auto;
+    padding: 20px;
+    background-color: darkgrey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Configuración del botón */
+#btnSaludar {
+    position: absolute;
+    bottom: 5%;
+    left: 30%;
+    height: 20%;
+    width: 40%;
+    margin: -15% 0 0 -25%;
+    font-size: xx-large;
+    cursor: pointer;
+}
+
+#btnBorrar {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    height: 20%;
+    width: 40%;
+    margin: 0 0 0 0;
+    font-size: xx-large;
+    cursor: pointer;
+}
