@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB con PHP</title>
+    <link rel="stylesheet" href="vista/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vista/css/estilo.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row" id="encabezado">
+            <div class="col-12 col-md-3 offset-2">
+                <h3 class="text-danger">Montreal</h3>
+            </div>
+        </div>
+        <div class="row" id="menu">
+            <div class="col-12 col-md-2">
+                <button class="btn btn1" id="btnProveedor">Proveedores</button>
+            </div>
+            <div class="col-12 col-md-2">
+                <button class="btn btn1" id="btnCliente">Clientes</button>
+            </div>
+            <div class="col-12 col-md-2">
+                <button class="btn btn1 dropdown-toggle" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">Productos</button>
+                <div class="dropdown-menu dropdown-menu-lg-right">
+                    <button class="dropdown-item" type="button" id="btnCrearProd">Crear Producto</button>
+                    <button class="dropdown-item" type="button" id="btnIngresarProd">Ingresar Producto</button>
+                    <button class="dropdown-item" type="button" id="btnVenderProd">Vender Producto</button>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-2">
+                <button class="btn btn1 dropdown-toggle" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">Ventas</button>
+                <div class="dropdown-menu dropdown-menu-lg-right">
+                    <button class="dropdown-item" type="button" id="btnConsultar">Consultar Ventas</button>
+                    <button class="dropdown-item" type="button" id="btnTendencia">Tendencia de Ventas</button>
+                    <button class="dropdown-item" type="button" id="btnRentabilidad">Rentabilidad</button>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="areaTrabajo">
+            <!-- INICIO CONTENIDOS DEL AREA DE TRABAJO -->
+                
+
+
+            <!-- FINAL CONTENIDOS DEL AREA DE TRABAJO -->
+        </div>
+    </div>
+    
+    <!-- PLANTILLAS -------------------------------------------------------->
+
+    <template id="formProveedor">
+        <div class="col-12 col-md-4 offset-md-4 borde">
+            <h2>Proveedores</h2>
+            <form id="formularioProveedor">
+                <div class="form-group">
+                    <label for="cantidadArticulo">Proveedores</label>
+                    <select class="custom-select" id="idProveedor">
+                        <option selected value="0">Seleccione un proveedor...</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="nombreProveedor">Nombre del Proveedor</label>
+                    <input type="text" class="form-control" id="nombreProveedor">
+                </div>
+
+                <div class="form-group">
+                    <label for="nitProveedor">NIT/CC</label>
+                    <input type="text" class="form-control" id="nitProveedor">
+                </div>
+
+                <div class="form-group">
+                    <label for="direccionProveedor">Dirección</label>
+                    <input type="text" class="form-control" id="direccionProveedor">
+                </div>
+
+                <div class="form-group">
+                    <label for="correoProveedor">Correo E.</label>
+                    <input type="text" class="form-control" id="correoProveedor">
+                </div>
+
+                <div class="form-group">
+                    <label for="telefonoProveedor">Teléfono</label>
+                    <input type="text" class="form-control" id="telefonoProveedor">
+                </div>
+            </form>
+            <button type="button" class="btn btn3 btn-warning" id="btnProveedorLimpiar">Limpiar</button>
+            <button type="button" class="btn btn3 btn-success" id="btnProveedorModificar">Modificar</button>
+            <button type="button" class="btn btn3 btn-primary" id="btnProveedorCrear">Crear</button>
+        </div>
+    </template>
+
+
+    <!-- ------------------------------------------------------------------->
+
+    <script src="vista/js/jquery-3.5.1.min.js"></script>
+    <script src="vista/js/popper.min.js"></script>
+    <script src="vista/js/bootstrap.min.js"></script>
+    <script src="vista/js/vista.js"></script>
+    <script src="controlador/controlador.js"></script>
+</body>
+</html>
