@@ -45,4 +45,34 @@
              }
          }
      }
+
+     /**
+      * Despliega una lista en un select
+      * @param {string} select: id del select en el html
+      * @param {array} lista: array de datos a desplegar en el select
+      * @param {string} key: nombre del campo de valor
+      * @param {string} txtMostrar: nombre del campo a visualizar
+      */
+     cargarSelect(select, lista, key, txtMostrar) {
+        $('#' + select + ' option').remove();
+        $('#' + select).append('<option value = "0">Seleccione una opción...</option>');
+        for (let j = 0; j < lista.length; j++) {
+            this.cargarOption(lista[j], key, txtMostrar, select)
+        }
+     }
+
+     /**
+      * Método auxiliar de cargarSelect
+      * @param {array} reg: registro con datos a insertar en un option del select
+      * @param {string} key: nombre del campo a cargar en value del option
+      * @param {string} txtMostrar: nombre del campo a mostrar en el option
+      * @param {string} select: id del select en el html
+      */
+     cargarOption(reg, key, txtMostrar, select) {
+         $('#' + select).append('<option value ='
+            + reg[key] + ' >'
+            + reg[txtMostrar]
+            + '</option>'
+        );
+     }
  }

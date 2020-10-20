@@ -7,6 +7,10 @@
 //Objeto de la clase Vista
 let vista = new Vista();
 
+//Módulo Proveedor
+let listaProveedores = [];
+let proveedor = new Proveedor();
+
 /** ********************************************************************
  * Asigna manejadores de eventos a los botones del menú principal
  * Se ejecuta al cargar la página
