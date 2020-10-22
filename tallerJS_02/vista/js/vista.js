@@ -54,6 +54,7 @@
       * @param {string} txtMostrar: nombre del campo a visualizar
       */
      cargarSelect(select, lista, key, txtMostrar) {
+        console.log("Paso 4 - Datos a desplegar en el Select: ", lista);
         $('#' + select + ' option').remove();
         $('#' + select).append('<option value = "0">Seleccione una opción...</option>');
         for (let j = 0; j < lista.length; j++) {
@@ -75,4 +76,16 @@
             + '</option>'
         );
      }
+
+     /**
+      * Despliega una ventana modal con título y mensaje
+      * @param {string} titulo: título de la ventana modal
+      * @param {string} msj: contenido del cuerpo de la ventana modal
+      */
+
+      mostrarModal(titulo, msj){
+          document.getElementById('modal-titulo').innerHTML = titulo;
+          document.getElementById('modal-cuerpo').innerHTML = msj;
+          $("#myModal").modal();    //Muestra la ventana modal
+      }
  }

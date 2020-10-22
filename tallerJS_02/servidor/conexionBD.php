@@ -10,7 +10,7 @@
 
  /* DATOS SERVIDOR LOCAL: */
  $host    = 'localhost';
- $db      = 'inventarios';
+ $db      = 'inventario';
  $user    = 'root';
  $pass    = '';
  $charset = 'utf8';

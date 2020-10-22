@@ -55,6 +55,7 @@
          datoConsulta['data'] = [];
          datoConsulta['opcion'] = "consultarProveedores";
          this.ejecutarAjax(datoConsulta, retorno);
+         console.log("Paso 1 - Solicitar la consulta: ", datoConsulta);
      }
 
      modificarProveedor(reg, retorno){

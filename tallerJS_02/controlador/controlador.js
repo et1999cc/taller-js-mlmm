@@ -27,13 +27,25 @@ window.onload = function() {
 };
 
 /**
- * Carga las plantilla según opción del menú principal
+ * BLOQUE CRUD PROVEEDOR
  */
 function mostrarFormCrearProv() {
     vista.mostrarPlantilla('formProveedor', 'areaTrabajo');
     document.getElementById("btnProveedorLimpiar").addEventListener("click", limpiarFormularioProveedor);
     document.getElementById("btnProveedorModificar").addEventListener("click", modificarProveedor);
     document.getElementById("btnProveedorCrear").addEventListener("click", crearProveedor);
+    proveedor.consultarProveedores(consultarProveedoresRetorno);
+}
+
+function consultarProveedoresRetorno(datos) {
+    console.log("Paso 3 - Respuesta en array JS: ", datos);
+    listaProveedores = []; //Limpia la lista
+    for (let i = 0; i < datos['data'].length; i++) {
+        proveedor = new Proveedor(datos['data'][i]);
+        listaProveedores.push(proveedor);
+    }
+    //Insertar en el select del formulario
+    vista.cargarSelect('idProveedor', datos['data'], 'idProveedor', 'nombreProveedor');
 }
 
 function mostrarFormCrearCliente() {

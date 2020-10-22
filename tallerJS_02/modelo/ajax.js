@@ -18,6 +18,7 @@
             data: datos,                        //Consulta y parámetros.
             type: 'post'                        //Método de petición al servidor.
         }).done( function (response) {          //Cuando el servidor responde correctamente.
+            console.log("Paso 2 - Respuesta JSON del proveedor: ", response);
             let resp = JSON.parse(response);    //Validar JSON.
             if (typeof resp == 'object') {
                 funcionRetorno(resp);           //Ejecuta la función de retorno.
